@@ -1,50 +1,109 @@
-# Welcome to your Expo app 👋
+# Product App – React Native (Expo + TypeScript)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## Desarrollador
+**Nombre:** Dennis Franco
 
-## Get started
+---
 
-1. Install dependencies
+## Descripción del proyecto
 
-   ```bash
-   npm install
-   ```
+Aplicación móvil desarrollada con React Native y Expo Router que permite realizar operaciones básicas de productos (listar, crear, editar, eliminar y ver detalles), utilizando la Fake Store API como fuente de datos. 
 
-2. Start the app
+Incluye manejo de estado global con Zustand, validaciones, navegación basada en archivos, y pruebas unitarias para funciones clave.
 
-   ```bash
-   npx expo start
-   ```
+---
 
-In the output, you'll find options to open the app in a
+## Tecnologías utilizadas
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- React Native con Expo
+- TypeScript
+- Zustand para gestión de estado global
+- Expo Router para navegación
+- Fake Store API como backend simulado
+- Jest y React Native Testing Library para pruebas unitarias
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+---
 
-## Get a fresh project
+## Instrucciones para clonar y ejecutar la aplicación
 
-When you're ready, run:
+1. Clonar el repositorio
 
-```bash
-npm run reset-project
+```
+git clone https://github.com/tu-usuario/product-app-react-native.git
+cd product-app-react-native
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+2. Instalar las dependencias
 
-## Learn more
+> Nota: Si usas Node.js 18+ y ocurre un conflicto al instalar los paquetes de testing, usa la opción `--legacy-peer-deps`.
 
-To learn more about developing your project with Expo, look at the following resources:
+```
+npm install --legacy-peer-deps
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+3. Ejecutar en un emulador o dispositivo
 
-## Join the community
+**Android:**
 
-Join our community of developers creating universal apps.
+```
+npx expo run:android
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+**iOS:**
+
+```
+npx expo run:ios
+```
+
+**Web (opcional):**
+
+```
+npm run web
+```
+
+---
+
+## Enlace a la API utilizada
+
+[https://fakestoreapi.com](https://fakestoreapi.com)
+
+---
+
+## Pruebas unitarias
+
+Para ejecutar los tests:
+
+```
+npm test
+```
+
+Cobertura de pruebas:
+
+- Componente `InputField` (renderizado, validación y eventos)
+- Store `useProductStore` (agregar, editar, eliminar productos)
+
+Configuración personalizada con `babel.config.js` y `jest.config.js` para transformar correctamente los módulos ESM (como `expo-modules-core`).
+
+---
+
+## Capturas de pantalla o video
+
+Imágenes dentro del directorio `assets/screenshots/`
+
+---
+
+## Enlace a Expo Snack
+
+```
+https://snack.expo.dev/@dennis/product-app
+```
+
+---
+
+## Decisiones de diseño o arquitectura 
+
+- Se eligió Zustand por su simplicidad y claridad frente a soluciones como Redux.
+- Expo Router permite un enfoque más limpio y escalable basado en estructura de carpetas.
+- Se separaron claramente los archivos en carpetas por dominio (`components`, `hooks`, `store`, `services`, etc.) para mantener una arquitectura clara y extensible.
+- Se aplicó tipado estricto con TypeScript para mejorar mantenibilidad.
+- Se usaron pruebas unitarias enfocadas en funciones puras del store y componentes desacoplados.
