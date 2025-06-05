@@ -6,12 +6,16 @@
       "@/*": [
         "./*"
       ]
-    }
+    },
+    "types": ["jest"],
+    "jsx": "react-native",
+    "module": "esnext",
+    "target": "esnext",
   },
   "include": [
     "**/*.ts",
     "**/*.tsx",
     ".expo/types/**/*.ts",
     "expo-env.d.ts"
-  ]
+, "jest.config.js"  ]
 }
