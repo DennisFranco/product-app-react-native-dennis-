@@ -29,7 +29,7 @@ Incluye manejo de estado global con Zustand, validaciones, navegación basada en
 1. Clonar el repositorio
 
 ```
-git clone https://github.com/DennisFranco/product-app-react-native-dennis-.git
+git clone -b main https://github.com/DennisFranco/product-app-react-native-dennis-.git
 cd product-app-react-native-dennis-
 ```
 
