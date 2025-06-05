@@ -92,14 +92,6 @@ Imágenes dentro del directorio `assets/screenshots/`
 
 ---
 
-## Enlace a Expo Snack
-
-```
-https://snack.expo.dev/@dennis/product-app
-```
-
----
-
 ## Decisiones de diseño o arquitectura 
 
 - Se eligió Zustand por su simplicidad y claridad frente a soluciones como Redux.
